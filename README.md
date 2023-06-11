@@ -14,6 +14,16 @@ A Python Implementation of combining Exponential Time Differencing and Pseudo-sp
 * `'IF'`: Integrating Factor method
 * `'ETD'`: Exponential Time Differencing
 
+## Installation
+
+Clone `spectralETD` repository if you haven't done it yet.
+
+```Shell
+git clone https://github.com/elvissoares/spectralETD
+```
+
+Go to `spectralETD`'s folder and run any `.ipynb` file as a Jupyter Notebook.
+
 ## Examples
 
 * 1D Burgers equations;
