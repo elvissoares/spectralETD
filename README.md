@@ -26,10 +26,10 @@ Go to `spectralETD`'s folder and run any `.ipynb` file as a Jupyter Notebook.
 
 ## Examples
 
-* 1D Burgers equations;
+* 1D Burgers equations ([`Burgers1d.ipynb`](https://github.com/elvissoares/spectralETD/blob/main/Burgers1d.ipynb));
 * 1D Advection-Diffusion equation;
-* 2D Cahn-Hilliard equation;
-* 2D Phase-Field Crystal equation;
+* 2D Cahn-Hilliard equation ([`CH2d.ipynb`](https://github.com/elvissoares/spectralETD/blob/main/CH2d.ipynb));
+* 3D Cahn-Hilliard equation ([`CH3d.ipynb`](https://github.com/elvissoares/spectralETD/blob/main/PFC2d.ipynb));
 
 You can see some movies of the examples in the ``movies`` folder.
 
@@ -55,7 +55,7 @@ Bibtex:
 
 
 # Contact
-Elvis Soares: elvis.asoares@gmail.com
+Elvis Soares: elvis@peq.coppe.ufrj.br
 
 Universidade Federal do Rio de janeiro
 
