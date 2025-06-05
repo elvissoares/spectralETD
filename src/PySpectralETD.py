@@ -160,7 +160,7 @@ class spectralETD():
         params (dict): Parameters required by the linear operator function.
         """
         if Loperator_k == None:
-            self.Loperator_k = lambda n: 0.0*n
+            self.Loperator_k = lambda n: torch.zeros_like(self.n_k)
         else:
             self.Loperator_k = Loperator_k(params)
 
@@ -171,11 +171,11 @@ class spectralETD():
         Noperator_func (callable): Function that computes the nonlinear operator in Fourier space.
         params (dict): Parameters required by the nonlinear operator function.
         """
-        if not callable(Noperator_func):
-            raise ValueError("Noperator_func must be a callable function.")
         # Check if Noperator_func is None
         if Noperator_func == None:
-            self.Noperator_func = lambda n: 0.0*n
+            self.Noperator_func = lambda n: torch.zeros_like(self.n_k)
+        elif not callable(Noperator_func):
+            raise ValueError("Noperator_func must be a callable function.")
         else:
             self.Noperator_func = lambda n: Noperator_func(n,params)
 

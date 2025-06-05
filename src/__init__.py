@@ -1,1 +1,1 @@
-from . import PyspectralETD, volumerender
+from . import PySpectralETD, volumerender
