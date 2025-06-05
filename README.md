@@ -74,7 +74,7 @@ Bibtex:
 
 
 # Contact
-Elvis Soares
+Prof. Elvis do A. Soares
 
 e-mail: elvis@peq.coppe.ufrj.br
 
