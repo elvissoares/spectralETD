@@ -6,6 +6,7 @@ A Python Implementation of combining Exponential Time Differencing and Pseudo-sp
 * [NumPy](https://numpy.org) is the fundamental package for scientific computing with Python.
 * [SciPy](https://scipy.org/) is a collection of fundamental algorithms for scientific computing in Python.
 * [Matplotlib](https://matplotlib.org/stable/index.html) is a comprehensive library for creating static, animated, and interactive visualizations in Python.
+* [PyTorch](https://pytorch.org/) is a high-level library for machine learning, with multidimensional tensors that can also be operated on a CUDA-capable NVIDIA GPU. 
 * *Optional*: [SciencePlots](https://github.com/garrettj403/SciencePlots) is a Matplotlib styles complement for scientific figures
 
 ## Time Integration Methods
@@ -16,22 +17,40 @@ A Python Implementation of combining Exponential Time Differencing and Pseudo-sp
 
 ## Installation
 
+### Option 1: Using `setup.py`
+
+Clone `PyDFTlj` repository if you haven't done it yet.
+
+```Shell
+git clone https://github.com/elvissoares/spectralETD
+```
+
+Go to `spectralETD`'s root folder, there you will find `setup.py` file, and run the command below:
+
+```Shell
+pip install -e .
+```
+
+The command `-e` permits to edit the local source code and add these changes to the spectralETD library.
+
+### Option 2: Using pip to install directly from the GitHub repo
+
 Clone `spectralETD` repository if you haven't done it yet.
 
 ```Shell
 git clone https://github.com/elvissoares/spectralETD
 ```
 
-Go to `spectralETD`'s folder and run any `.ipynb` file as a Jupyter Notebook.
+Go to `spectralETD`'s folder and run any `.ipynb` file from the `examples`'s folder as a Jupyter Notebook.
 
 ## Examples
 
-* 1D Burgers equations ([`Burgers1d.ipynb`](https://github.com/elvissoares/spectralETD/blob/main/Burgers1d.ipynb));
-* 1D Advection-Diffusion equation;
-* 2D Cahn-Hilliard equation ([`CH2d.ipynb`](https://github.com/elvissoares/spectralETD/blob/main/CH2d.ipynb));
-* 3D Cahn-Hilliard equation ([`CH3d.ipynb`](https://github.com/elvissoares/spectralETD/blob/main/PFC2d.ipynb));
+* 1D Advection-Diffusion equation ([`DiffusionAdvection1d.ipynb`](https://github.com/elvissoares/spectralETD/blob/main/examples/DiffusionAdvection1d.ipynb));
+* 1D Burgers equations ([`Burgers1d.ipynb`](https://github.com/elvissoares/spectralETD/blob/main/examples/Burgers1d.ipynb));
+* 2D Cahn-Hilliard equation ([`CH2d.ipynb`](https://github.com/elvissoares/spectralETD/blob/main/examples/CH2d.ipynb));
+* 3D Cahn-Hilliard equation ([`CH3d.ipynb`](https://github.com/elvissoares/spectralETD/blob/main/examples/CH3d.ipynb));
 
-You can see some movies of the examples in the ``movies`` folder.
+You can see some movies of the examples in the `movies`'s folder.
 
 # Cite SpectralETD
 
@@ -55,8 +74,12 @@ Bibtex:
 
 
 # Contact
-Elvis Soares: elvis@peq.coppe.ufrj.br
+Elvis Soares
 
-Universidade Federal do Rio de janeiro
+e-mail: elvis@peq.coppe.ufrj.br
 
-School of Chemistry
+Chemical Engineering Program - COPPE
+
+Universidade Federal do Rio de janeiro (UFRJ)
+
+Brazil
