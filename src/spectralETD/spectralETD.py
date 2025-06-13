@@ -1,7 +1,7 @@
 import numpy as np
 import torch
 
-class spectralETD():
+class SpectralETD():
     """
     A class for spectral Exponential Time Differencing (ETD) methods for Phase-Field Model Equation in three dimensions in a GPU-accelerated framework.
     """
