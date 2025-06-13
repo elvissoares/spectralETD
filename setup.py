@@ -6,14 +6,12 @@ setuptools.setup(
     author="Prof. Elvis Soares", #<<<
     author_email="elvis@peq.coppe.ufrj.br", #<<<
     description="A Python Implementation of combining Exponential Time Differencing and Pseudo-spectral Methods for Phase-Field Model Equation", #<<<
-    url="https://github.com/elvissoares/PySpectralETD",  #<<<
+    url="https://github.com/elvissoares/spectralETD",  #<<<
     python_requires=">=3.0",  #<<<
-    install_requires=[         
-        'pandas',         
+    install_requires=[                 
         'numpy',
         'matplotlib',
         'scipy',
-        'scienceplots',
         'torch >= 2.0.0',  # Ensure PyTorch is installed with CUDA 11.8
     ],  #<<<
     packages=setuptools.find_packages(
