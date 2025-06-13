@@ -1,5 +1,6 @@
 [project]
 name = "spectralETD"
+version = "0.0.2"
 description="A Python Implementation of combining Exponential Time Differencing and Pseudo-spectral Methods for Phase-Field Model Equation"
 authors = [
     { name = "Elvis Soares", email = "elvis.asoares@gmail.com" },
