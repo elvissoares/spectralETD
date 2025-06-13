@@ -1,3 +1,0 @@
-# spectralETD Functions
-
-::: spectralETD
