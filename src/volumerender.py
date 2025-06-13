@@ -1,8 +1,21 @@
 import numpy as np
 from scipy.interpolate import interpn
 
-""" Volume Rendering """
 def transferFunction(x,rhos):
+    """
+    Transfer function for volume rendering.
+
+    **Args:**
+
+    - `x`: numpy array of values to be mapped to colors.
+
+    - `rhos`: list of density values where the colors change.
+
+    **Returns:**
+
+    - `r`, `g`, `b`, `a`: numpy arrays of red, green, blue, and alpha values.
+    """
+
     sigmarho = np.array([0.1,0.1,0.15])*rhos[-1]
 
     offwhite = np.array([247,247,247])/255
@@ -25,9 +38,31 @@ def transferFunction(x,rhos):
 	
     return r,g,b,a
 
-
-""" Volume Rendering """
 def volumerender(L, rho, phi = -30.0, theta = 0.0, psi = -15.0, Ngrid = 256, min_value = 0.0, max_value = 1.0):
+    """
+    Volume rendering of a 3D data cube.
+    **Args:**
+
+    - `L`: tuple of length 3, the dimensions of the data cube (Lx, Ly, Lz).
+
+    - `rho`: numpy array of shape (Nx, Ny, Nz), the data cube to be rendered.
+
+    - `phi`: float, rotation around x-axis in degrees (default: -30.0).
+
+    - `theta`: float, rotation around y-axis in degrees (default: 0.0).
+
+    - `psi`: float, rotation around z-axis in degrees (default: -15.0).
+
+    - `Ngrid`: int, number of grid points for rendering (default: 256).
+
+    - `min_value`: float, minimum value for transfer function (default: 0.0).
+
+    - `max_value`: float, maximum value for transfer function (default: 1.0).
+
+    **Returns:**
+
+    - `image`: numpy array of shape (Ngrid, Ngrid, 3), the rendered image.
+    """
 
     # Dimetric view: phi=45,theta=0,psi=-15.5
     # Trimetric view: phi=62.5,theta=0,psi=-15.5

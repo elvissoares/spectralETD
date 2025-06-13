@@ -1,18 +1,21 @@
-"""
-A Python+Torch program that solves Phase Field equations in a periodic 
-domain. 
-"""
 import numpy as np
 import torch
 
 class spectralETD():
+    """
+    A class for spectral Exponential Time Differencing (ETD) methods for Phase-Field Model Equation in three dimensions in a GPU-accelerated framework.
+    """
     def __init__(self,ndim=2,method = 'ETD',device='cuda'):    
         """
         Initialize the spectralETD class.
-        Parameters:
-        ndim (int): Number of dimensions (1, 2, or 3).
-        method (str): Time integration method ('IMEX', 'IF', or 'ETD').
-        device (str): Device to run the computations on ('cpu' or 'cuda').
+        
+        **Parameters:**
+
+        - `ndim` (int): Number of dimensions (1, 2, or 3).
+
+        - `method` (str): Time integration method ('IMEX', 'IF', or 'ETD').
+
+        - `device` (str): Device to run the computations on ('cpu' or 'cuda').
         """
         # Set the number of dimensions
         if ndim not in [1, 2, 3]:
@@ -43,9 +46,11 @@ class spectralETD():
     def Set_Geometry(self,lengths,gridsize=None):
         """
         Set the geometry of the simulation box.
-        Parameters:
-        lengths (tuple): Lengths of the box in each dimension.
-        gridsize (tuple): Number of grid points in each dimension. If None, defaults to 128.
+
+        **Parameters:**
+
+        - `lengths` (tuple): Lengths of the box in each dimension.
+        - `gridsize` (tuple): Number of grid points in each dimension. If None, defaults to 128.
         """
         # Test if lengths is a tuple or list
         if not isinstance(lengths, (tuple, list)):
@@ -146,8 +151,10 @@ class spectralETD():
     def Set_Field(self,n):
         """
         Set the initial field configuration.
-        Parameters:
-        n (numpy.ndarray): Initial field configuration, must match the grid size.
+
+        **Parameters:**
+
+        - `n` (numpy.ndarray): Initial field configuration, must match the grid size.
         """
         self.n[:] = torch.from_numpy(n) 
         self.n_k[:] =  self.fft(self.n)
@@ -155,9 +162,12 @@ class spectralETD():
     def Set_LinearOperator(self,Loperator_k,params):
         """
         Set the linear operator in Fourier space.
-        Parameters:
-        Loperator_k (callable): Function that computes the linear operator in Fourier space.
-        params (dict): Parameters required by the linear operator function.
+
+        **Parameters:**
+
+        - `Loperator_k` (callable): Function that computes the linear operator in Fourier space.
+
+        - `params` (dict): Parameters required by the linear operator function.
         """
         if Loperator_k == None:
             self.Loperator_k = lambda n: torch.zeros_like(self.n_k)
@@ -167,9 +177,12 @@ class spectralETD():
     def Set_NonLinearOperator(self,Noperator_func,params):
         """
         Set the nonlinear operator in Fourier space.
-        Parameters:
-        Noperator_func (callable): Function that computes the nonlinear operator in Fourier space.
-        params (dict): Parameters required by the nonlinear operator function.
+
+        **Parameters:** 
+
+        - `Noperator_func` (callable): Function that computes the nonlinear operator in Fourier space.
+
+        - `params` (dict): Parameters required by the nonlinear operator function.
         """
         # Check if Noperator_func is None
         if Noperator_func == None:
@@ -182,8 +195,10 @@ class spectralETD():
     def Set_TimeStep(self,h=0.01):
         """
         Set the time step for the simulation.
-        Parameters:
-        h (float): Time step size.
+
+        **Parameters:**
+
+        `h` (float): Time step size.
         """
         if not isinstance(h, (int, float)):
             raise ValueError("h must be a numeric value.")
@@ -208,6 +223,7 @@ class spectralETD():
     def Calculate_TimeStep(self):
         """
         Perform a single time step of the simulation.
+
         This function updates the field configuration using the specified time integration method.
         """
         # updating in time
@@ -221,11 +237,17 @@ class spectralETD():
     def Calculate_Dynamics(self,ti,tf, print_every = 10):
         """
         Integrate the dynamics from initial time ti to final time tf.
-        Parameters:
-        ti (float): Initial time.
-        tf (float): Final time.
-        print_every (int): Print progress every 'print_every' steps.
-        Returns:
+
+        **Parameters:**
+
+        - `ti` (float): Initial time.
+
+        - `tf` (float): Final time.
+
+        - `print_every` (int): Print progress every 'print_every' steps.
+
+        **Returns:**
+
         numpy.ndarray: The field configuration at the final time.
         """
         if not isinstance(ti, (int, float)):
