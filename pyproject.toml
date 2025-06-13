@@ -1,0 +1,24 @@
+[project]
+name = "spectralETD"
+description="A Python Implementation of combining Exponential Time Differencing and Pseudo-spectral Methods for Phase-Field Model Equation"
+authors = [
+    { name = "Elvis Soares", email = "elvis.asoares@gmail.com" },
+]
+readme = "README.md"
+requires-python = ">=3.10"
+license = {file = "LICENSE"}
+dynamic = ["version", "dependencies"]
+
+[project.urls]
+Documentation = "https://spectraletd.readthedocs.io"
+Homepage = "https://github.com/elvissoares/spectralETD"
+
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools-git-versioning]
+enabled = true
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel", "setuptools-git-versioning>=2.0,<3"]
+build-backend = "setuptools.build_meta"
