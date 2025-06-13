@@ -1,0 +1,9 @@
+# Requirements for building the documentation       
+numpy
+matplotlib
+scipy
+torch
+sphinx-inline-tabs
+sphinx-examples
+sphinx-proof
+sphinx-hoverxref
