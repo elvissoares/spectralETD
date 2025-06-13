@@ -1,7 +1,7 @@
 import setuptools
 # This is a setup script for the spectralETD package, which implements a combination of Exponential Time Differencing and Pseudo-spectral Methods for Phase-Field Model Equation.
 setuptools.setup(
-    name="PySpectralETD",
+    name="spectralETD",
     version="1.0",
     author="Prof. Elvis Soares", #<<<
     author_email="elvis@peq.coppe.ufrj.br", #<<<
@@ -18,7 +18,7 @@ setuptools.setup(
     ],  #<<<
     packages=setuptools.find_packages(
         where='src',  # Specify the source directory
-        include=['PySpectralETD*','volumerender*'],  # alternatively: `exclude=['additional*']`
+        include=['spectralETD*','volumerender*'],  # alternatively: `exclude=['additional*']`
         ), #<<<
     package_dir={"": "src"}, # Specify the package directory
     classifiers=[

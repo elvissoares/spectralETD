@@ -1,4 +1,4 @@
-# PySpectralETD
+# spectralETD
 A Python Implementation of combining Exponential Time Differencing and Pseudo-spectral Methods for Phase-Field Model Equation
 
 ## Dependencies
@@ -19,42 +19,42 @@ A Python Implementation of combining Exponential Time Differencing and Pseudo-sp
 
 ### Option 1: Using `setup.py`
 
-Clone `PySpectralETD` repository if you haven't done it yet.
+Clone `spectralETD` repository if you haven't done it yet.
 
 ```Shell
-git clone https://github.com/elvissoares/PySpectralETD
+git clone https://github.com/elvissoares/spectralETD
 ```
 
-Go to `PySpectralETD`'s root folder, there you will find `setup.py` file, and run the command below:
+Go to `spectralETD`'s root folder, there you will find `setup.py` file, and run the command below:
 
 ```Shell
 pip install -e .
 ```
 
-The command `-e` permits to edit the local source code and add these changes to the PySpectralETD library.
+The command `-e` permits to edit the local source code and add these changes to the spectralETD library.
 
 ### Option 2: Using pip to install directly from the GitHub repo
 
-Clone `PySpectralETD` repository if you haven't done it yet.
+Clone `spectralETD` repository if you haven't done it yet.
 
 ```Shell
-git clone https://github.com/elvissoares/PySpectralETD
+git clone https://github.com/elvissoares/spectralETD
 ```
 
-Go to `PySpectralETD`'s folder and run any `.ipynb` file from the `examples`'s folder as a Jupyter Notebook.
+Go to `spectralETD`'s folder and run any `.ipynb` file from the [`examples`](https://github.com/elvissoares/spectralETD/blob/main/examples)'s folder as a Jupyter Notebook.
 
 ## Examples
 
-* 1D Advection-Diffusion equation ([`DiffusionAdvection1d.ipynb`](https://github.com/elvissoares/PySpectralETD/blob/main/examples/DiffusionAdvection1d.ipynb));
-* 1D Burgers equations ([`Burgers1d.ipynb`](https://github.com/elvissoares/PySpectralETD/blob/main/examples/Burgers1d.ipynb));
-* 2D Cahn-Hilliard equation ([`CH2d.ipynb`](https://github.com/elvissoares/PySpectralETD/blob/main/examples/CH2d.ipynb));
-* 3D Cahn-Hilliard equation ([`CH3d.ipynb`](https://github.com/elvissoares/PySpectralETD/blob/main/examples/CH3d.ipynb));
+* 1D Advection-Diffusion equation ([`DiffusionAdvection1d.ipynb`](https://github.com/elvissoares/spectralETD/blob/main/examples/DiffusionAdvection1d.ipynb));
+* 1D Burgers equations ([`Burgers1d.ipynb`](https://github.com/elvissoares/spectralETD/blob/main/examples/Burgers1d.ipynb));
+* 2D Cahn-Hilliard equation ([`CH2d.ipynb`](https://github.com/elvissoares/spectralETD/blob/main/examples/CH2d.ipynb));
+* 3D Cahn-Hilliard equation ([`CH3d.ipynb`](https://github.com/elvissoares/spectralETD/blob/main/examples/CH3d.ipynb));
 
-You can see some plots and movies of the examples in the `outputs`'s folder.
+You can see some plots and movies of the examples in the [`examples`](https://github.com/elvissoares/spectralETD/blob/main/examples)'s folder.
 
-# Cite PySpectralETD
+# Cite spectralETD
 
-If you use PySpectralETD in your work, please consider to cite it using the following reference:
+If you use spectralETD in your work, please consider to cite it using the following reference:
 
 Soares, E. do A., Barreto, A. G. & Tavares, F. W. *Exponential Integrators for Phase-Field Equations using Pseudo-spectral Methods: A Python Implementation.* 1–12 (2023). ArXiv: [2305.08998](http://arxiv.org/abs/2305.08998)
 
