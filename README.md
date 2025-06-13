@@ -2,13 +2,16 @@
 
 **spectralETD** is a Python library which combines Exponential Time Differencing and Pseudo-spectral Methods for Phase-Field Model Equation in three dimensions in a GPU-accelerated framework.
 
-## Dependencies
+## Requirements
 
+* [Python](https://www.python.org/) 3.10 or later
 * [NumPy](https://numpy.org) is the fundamental package for scientific computing with Python.
 * [SciPy](https://scipy.org/) is a collection of fundamental algorithms for scientific computing in Python.
 * [Matplotlib](https://matplotlib.org/stable/index.html) is a comprehensive library for creating static, animated, and interactive visualizations in Python.
 * [PyTorch](https://pytorch.org/) is a high-level library for machine learning, with multidimensional tensors that can also be operated on a CUDA-capable NVIDIA GPU. 
-* *Optional*: [SciencePlots](https://github.com/garrettj403/SciencePlots) is a Matplotlib styles complement for scientific figures
+
+### Optional
+* [SciencePlots](https://github.com/garrettj403/SciencePlots) is a Matplotlib styles complement for scientific figures
 
 ## Time Integration Methods
 
@@ -18,13 +21,28 @@
 
 ## Installation
 
+The easiest way to install spectralETD is by using `pip`:
+
 ```Shell
 pip install spectralETD
 ```
 
+To install the development version:
+```Shell
+pip install git+https://github.com/elvissoares/spectralETD.git
+```
+
+or 
+
+```Shell
+git clone https://github.com/elvissoares/spectralETD
+cd spectralETD
+pip install -e .
+```
+
 Check out the [examples](examples) section for further information.
 
-# Cite spectralETD
+## Citing spectralETD
 
 If you use spectralETD in your work, please consider to cite it using the following reference:
 
@@ -45,7 +63,7 @@ Bibtex:
     }
 
 
-# Contact
+## Contact
 Prof. Elvis do A. Soares
 
 e-mail: elvis@peq.coppe.ufrj.br
