@@ -40,7 +40,7 @@ cd spectralETD
 pip install -e .
 ```
 
-Check out the [examples](examples) section for further information.
+Check out the [examples](examples.md) section for further information.
 
 ## Citing spectralETD
 
