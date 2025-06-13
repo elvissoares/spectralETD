@@ -1,5 +1,6 @@
 # spectralETD
-A Python Implementation of combining Exponential Time Differencing and Pseudo-spectral Methods for Phase-Field Model Equation
+
+**spectralETD** is a Python library which combines Exponential Time Differencing and Pseudo-spectral Methods for Phase-Field Model Equation in three dimensions in a GPU-accelerated framework.
 
 ## Dependencies
 
@@ -17,40 +18,11 @@ A Python Implementation of combining Exponential Time Differencing and Pseudo-sp
 
 ## Installation
 
-### Option 1: Using `setup.py`
-
-Clone `spectralETD` repository if you haven't done it yet.
-
 ```Shell
-git clone https://github.com/elvissoares/spectralETD
+pip install spectralETD
 ```
 
-Go to `spectralETD`'s root folder, there you will find `setup.py` file, and run the command below:
-
-```Shell
-pip install -e .
-```
-
-The command `-e` permits to edit the local source code and add these changes to the spectralETD library.
-
-### Option 2: Using pip to install directly from the GitHub repo
-
-Clone `spectralETD` repository if you haven't done it yet.
-
-```Shell
-git clone https://github.com/elvissoares/spectralETD
-```
-
-Go to `spectralETD`'s folder and run any `.ipynb` file from the [`examples`](https://github.com/elvissoares/spectralETD/blob/main/examples)'s folder as a Jupyter Notebook.
-
-## Examples
-
-* 1D Advection-Diffusion equation ([`DiffusionAdvection1d.ipynb`](https://github.com/elvissoares/spectralETD/blob/main/examples/DiffusionAdvection1d.ipynb));
-* 1D Burgers equations ([`Burgers1d.ipynb`](https://github.com/elvissoares/spectralETD/blob/main/examples/Burgers1d.ipynb));
-* 2D Cahn-Hilliard equation ([`CH2d.ipynb`](https://github.com/elvissoares/spectralETD/blob/main/examples/CH2d.ipynb));
-* 3D Cahn-Hilliard equation ([`CH3d.ipynb`](https://github.com/elvissoares/spectralETD/blob/main/examples/CH3d.ipynb));
-
-You can see some plots and movies of the examples in the [`examples`](https://github.com/elvissoares/spectralETD/blob/main/examples)'s folder.
+Check out the [examples](examples) section for further information.
 
 # Cite spectralETD
 
