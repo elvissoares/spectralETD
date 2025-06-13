@@ -9,6 +9,25 @@ requires-python = ">=3.10"
 license = {file = "LICENSE"}
 dynamic = ["version", "dependencies"]
 
+keywords = [
+    "python",
+    "torch",
+    "gpu",
+    "phase-field",
+]
+
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: Implementation",
+    "Topic :: Scientific/Engineering :: Physics",
+    "Topic :: Scientific/Engineering :: Chemistry",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Environment :: GPU",
+]
+
 [project.urls]
 Documentation = "https://spectraletd.readthedocs.io"
 Homepage = "https://github.com/elvissoares/spectralETD"
