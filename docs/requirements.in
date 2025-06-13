@@ -3,6 +3,7 @@ numpy
 matplotlib
 scipy
 torch
+spectralETD
 mkdocs
 mkdocstrings[python]
 markdown-include
